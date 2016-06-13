@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - my_user_sys@192.168.73.128" uuid="1e718817-fd16-422a-9536-c3980c7fae80">
+    <database-info product="MySQL" version="5.1.73" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="my_user_sys"/>
+      <table id="2" parent="1" name="easy_application">
+        <comment>easy application table struts</comment>
+      </table>
+      <table id="3" parent="1" name="easy_button">
+        <comment>easy button table struts</comment>
+      </table>
+      <table id="4" parent="1" name="easy_menu">
+        <comment>easy menu table struts</comment>
+      </table>
+      <table id="5" parent="1" name="easy_privilege">
+        <comment>easy privilege table struts</comment>
+      </table>
+      <table id="6" parent="1" name="easy_role">
+        <comment>easy role table struts</comment>
+      </table>
+      <table id="7" parent="1" name="easy_user">
+        <comment>easy user table struts</comment>
+      </table>
+      <table id="8" parent="1" name="easy_user_role">
+        <comment>easy user role relation table struts</comment>
+      </table>
+      <column id="9" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="10" parent="2" name="application_code">
+        <comment>application code</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="11" parent="2" name="application_name">
+        <comment>application name</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="12" parent="2" name="application_desc">
+        <comment>application desc</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="13" parent="2" name="show_in_menu">
+        <comment>is application show in menu (1 show 0 unshow)</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+        <default-expression>b&apos;1&apos;</default-expression>
+      </column>
+      <key id="14" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="15" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="16" parent="3" name="button_no">
+        <comment>button no</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="17" parent="3" name="menu_no">
+        <comment>related menu no</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="18" parent="3" name="button_order">
+        <comment>button sort order no</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="19" parent="3" name="button_name">
+        <comment>button name</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="20" parent="3" name="button_class">
+        <comment>button related class</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="21" parent="3" name="button_icon">
+        <comment>button icon</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="22" parent="3" name="button_script">
+        <comment>button related script</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="23" parent="3" name="init_status">
+        <comment>button init status</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="24" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="25" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="26" parent="4" name="menu_no">
+        <comment>menu no</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="27" parent="4" name="application_code">
+        <comment>menu related application code</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="28" parent="4" name="menu_parent_no">
+        <comment>menu parent no</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="29" parent="4" name="menu_order">
+        <comment>menu sort order no</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="30" parent="4" name="menu_name">
+        <comment>menu name</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="31" parent="4" name="menu_url">
+        <comment>menu url</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="32" parent="4" name="menu_icon">
+        <comment>menu icon</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(150)</data-type>
+      </column>
+      <column id="33" parent="4" name="is_visiable">
+        <comment>is menu visiable(1 visiable,0 unvisiable)</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+        <default-expression>b&apos;1&apos;</default-expression>
+      </column>
+      <column id="34" parent="4" name="is_leaf">
+        <comment>is menu leaf</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+        <default-expression>b&apos;1&apos;</default-expression>
+      </column>
+      <key id="35" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="36" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="37" parent="5" name="privilege_master">
+        <comment>privilege master type</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="38" parent="5" name="privilege_master_value">
+        <comment>privilege master id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="39" parent="5" name="privilege_access">
+        <comment>privilege access type</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="40" parent="5" name="privilege_access_value">
+        <comment>privilege access id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="41" parent="5" name="privilege_operation">
+        <comment>privilege operation</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="42" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="43" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="44" parent="6" name="role_name">
+        <comment>role name</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="45" parent="6" name="role_desc">
+        <comment>role description</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="46" parent="6" name="create_user_id">
+        <comment>role maker</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(30)</data-type>
+      </column>
+      <column id="47" parent="6" name="create_date">
+        <comment>role make date time</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="48" parent="6" name="modify_user_id">
+        <comment>role modifier</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(30)</data-type>
+      </column>
+      <column id="49" parent="6" name="modify_date">
+        <comment>role modify date time</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="50" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="51" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="52" parent="7" name="login_name">
+        <comment>login user name</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="53" parent="7" name="login_password">
+        <comment>login user password</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="54" parent="7" name="email">
+        <comment>login user email</comment>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="55" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="56" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="57" parent="8" name="userId">
+        <comment>related user id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="58" parent="8" name="roleId">
+        <comment>related role id</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="59" parent="8" name="create_user_id">
+        <comment>relation maker</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(30)</data-type>
+      </column>
+      <column id="60" parent="8" name="create_date">
+        <comment>relation make date time</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="61" parent="8" name="modify_user_id">
+        <comment>relation modifier</comment>
+        <mandatory>1</mandatory>
+        <data-type>bigint(30)</data-type>
+      </column>
+      <column id="62" parent="8" name="modify_date">
+        <comment>relation modify date time</comment>
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="63" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
